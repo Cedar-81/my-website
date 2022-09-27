@@ -1,0 +1,42 @@
+---
+import Work from "./Work.astro";
+---
+
+<section id="projects" class="workcon mt-[4rem] con flex w-full mb-[3.7rem]">
+  <img class="h-[70vh] my-auto workmoon" src="/assets/leftmoon.png" />
+  <div class="flex justify-between">
+    <div class="text-white w-[40%] my-auto h-[80vh] relative top-4">
+      <h2
+        class="text-[6rem] workh2 2xl:text-[12rem] 2xl:leading-[15rem] leading-[8rem] text-mainColor"
+      >
+        Works
+      </h2>
+      <svg
+        width="123"
+        height="8"
+        viewBox="0 0 123 8"
+        fill="none"
+        class="mt-[-1rem] worksvg ml-[10px]"
+        xmlns="http://www.w3.org/2000/svg"
+      >
+        <line y1="4" x2="123" y2="4" stroke="white" stroke-width="8"></line>
+      </svg>
+
+      <p
+        class="2xl:text-[2rem] workp 2xl:leading-[3rem] text-lg ml-4 mt-4 2xl:mt-6"
+      >
+        After considering a lot about what a real life project would look like,
+        here are a couple of projects I came up with. Most of these I have done
+        for clients and others for myself.
+      </p>
+    </div>
+
+    <Work />
+  </div>
+</section>
+
+<style>
+  .workcon {
+    height: calc(100vh - 7rem);
+  }
+</style>

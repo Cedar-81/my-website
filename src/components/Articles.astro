@@ -1,0 +1,85 @@
+---
+import Articlecard from "./Articlecard.astro";
+import Mostread from "./Mostread.astro";
+import Toparticlecard from "./Toparticlecard.astro";
+
+const articles = [
+  {
+    title: "The Mystery of Repitition In Tech",
+    summary: `Lorem ipsum dolor sit amet consectetur adipiscing elit non eu magnis
+      conubia, sem blandit faucibus fames sagittis mus potenti molestie
+      parturient. Quis mauris tortor cras donec risus porta cubilia, imperdiet
+      auctor convallis dictumst sociosqu et. Libero commodo sed pretium sapien
+      velit cum tellus nostra, a pellentesque senectus facilisis vitae platea
+      eros, imperdiet feugiat dis`,
+    img: "/assets/p6img.png",
+  },
+  {
+    title: "The Mystery of Repitition In Tech",
+    summary: `Lorem ipsum dolor sit amet consectetur adipiscing elit non eu magnis
+      conubia, sem blandit faucibus fames sagittis mus potenti molestie
+      parturient. Quis mauris tortor cras donec risus porta cubilia, imperdiet
+      auctor convallis dictumst sociosqu et. Libero commodo sed pretium sapien
+      velit cum tellus nostra, a pellentesque senectus facilisis vitae platea
+      eros, imperdiet feugiat dis`,
+    img: "/assets/p4img.png",
+  },
+  {
+    title: "The Mystery of Repitition In Tech",
+    summary: `Lorem ipsum dolor sit amet consectetur adipiscing elit non eu magnis
+      conubia, sem blandit faucibus fames sagittis mus potenti molestie
+      parturient. Quis mauris tortor cras donec risus porta cubilia, imperdiet
+      auctor convallis dictumst sociosqu et. Libero commodo sed pretium sapien
+      velit cum tellus nostra, a pellentesque senectus facilisis vitae platea
+      eros, imperdiet feugiat dis`,
+    img: "/assets/p5img.png",
+  },
+  {
+    title: "The Mystery of Repitition In Tech",
+    summary: `Lorem ipsum dolor sit amet consectetur adipiscing elit non eu magnis
+      conubia, sem blandit faucibus fames sagittis mus potenti molestie
+      parturient. Quis mauris tortor cras donec risus porta cubilia, imperdiet
+      auctor convallis dictumst sociosqu et. Libero commodo sed pretium sapien
+      velit cum tellus nostra, a pellentesque senectus facilisis vitae platea
+      eros, imperdiet feugiat dis`,
+    img: "/assets/p6img.png",
+  },
+  {
+    title: "The Mystery of Repitition In Tech",
+    summary: `Lorem ipsum dolor sit amet consectetur adipiscing elit non eu magnis
+      conubia, sem blandit faucibus fames sagittis mus potenti molestie
+      parturient. Quis mauris tortor cras donec risus porta cubilia, imperdiet
+      auctor convallis dictumst sociosqu et. Libero commodo sed pretium sapien
+      velit cum tellus nostra, a pellentesque senectus facilisis vitae platea
+      eros, imperdiet feugiat dis`,
+    img: "/assets/p7img.png",
+  },
+  {
+    title: "The Mystery of Repitition In Tech",
+    summary: `Lorem ipsum dolor sit amet consectetur adipiscing elit non eu magnis
+      conubia, sem blandit faucibus fames sagittis mus potenti molestie
+      parturient. Quis mauris tortor cras donec risus porta cubilia, imperdiet
+      auctor convallis dictumst sociosqu et. Libero commodo sed pretium sapien
+      velit cum tellus nostra, a pellentesque senectus facilisis vitae platea
+      eros, imperdiet feugiat dis`,
+    img: "/assets/p8img.png",
+  },
+];
+---
+
+<section class="articlescon mt-[7rem] bg-grayColor w-full text-white">
+  <div class="w-full p-[5%]">
+    <h2 class="my-8 text-center text-[2.5rem] w-[40%] mx-auto mb-[5rem]">
+      Well, why don’t you dig in already?
+    </h2>
+    <div class="articles grid grid-flow-row gap-7 grid-cols-4">
+      {articles.map((content) => <Articlecard article={content} />)}
+    </div>
+  </div>
+  <div class="flex ml-[10%] pr-[6%]">
+    <Toparticlecard article={articles[0]} />
+    <div class="">
+      {articles.map((content) => <Mostread article={content} />)}
+    </div>
+  </div>
+</section>

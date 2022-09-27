@@ -1,0 +1,92 @@
+---
+const projects = [
+  {
+    img: "/assets/p1img.png",
+    id: 0,
+    name: "Flip",
+  },
+  {
+    img: "/assets/p2img.png",
+    id: 1,
+    name: "Xplore Libz",
+  },
+  {
+    img: "/assets/p3img.png",
+    id: 2,
+    name: "Techify",
+  },
+];
+---
+
+<div class="h-full projectscon overflow-hidden hover:overflow-y-auto">
+  {
+    projects.map((project, index) => (
+      <div class="flex project cursor-pointer rounded-md relative">
+        {index % 2 == 0 && (
+          <>
+            <img src={project.img} class="h-[35vh]" />
+            <div class="w-[38vh] h-[35vh] bg-black text-white flex justify-between items-end px-4 py-3">
+              <p class="text-[1rem] ">{project.name}</p>
+              <p class="text-[5rem] leading-[4rem]">{project.id}</p>
+            </div>
+          </>
+        )}
+        {index % 2 !== 0 && (
+          <>
+            <div class="w-[38vh] h-[35vh] bg-black text-white flex justify-between items-end px-4 py-3 ">
+              <p class="text-[1rem] ">{project.name}</p>
+              <p class="text-[5rem] leading-[4rem]">{project.id}</p>
+            </div>
+            <img src={project.img} class="h-[35vh]" />
+          </>
+        )}
+      </div>
+    ))
+  }
+</div>
+
+<style>
+  .project:hover::after {
+    content: "View";
+    color: white;
+    position: absolute;
+    font-size: 2rem;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    top: 0;
+    right: 0;
+    z-index: 10;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.491);
+    backdrop-filter: blur(15px);
+    border: 3px solid #ae0721;
+  }
+
+  /* scrollbar style */
+
+  /* width */
+  body::-webkit-scrollbar {
+    width: 8px;
+    height: 8px;
+  }
+
+  *::-webkit-scrollbar {
+    width: 8px;
+    height: 8px;
+  }
+
+  /* Track */
+  *::-webkit-scrollbar-track {
+    background: rgba(221, 221, 221, 0.357);
+    border-radius: 15px;
+    margin: 0.3em;
+  }
+
+  /* Handle */
+  *::-webkit-scrollbar-thumb {
+    background: #2b2d3494;
+    border-radius: 15px;
+  }
+</style>

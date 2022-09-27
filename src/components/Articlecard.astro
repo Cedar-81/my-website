@@ -1,0 +1,32 @@
+---
+const { article } = Astro.props;
+// console.log(article);
+---
+
+<div
+  class="card w-[18rem] rounded-md bg-black border-2 cursor-pointer border-yellow-300"
+>
+  <div
+    class="cardimg h-[12rem] w-full"
+    style={{ background: `url(${article.img})` }}
+  >
+  </div>
+  <div class="cardbody mt-4 p-3">
+    <h4 class="cardtitle text-xl font-medium">{article.title}</h4>
+    <p class="cardbody text-sm mt-2">
+      {article.summary.substring(0, 240)}
+      <span class="cardexpand text-mainColor">...see more</span>
+    </p>
+    <button class="rounded-full w-[60%] hidden h-[2.3rem] bg-mainColor mt-4"
+      >Read Now</button
+    >
+  </div>
+</div>
+
+<script src="../scripts/blog.js"></script>
+
+<!-- <style>
+  .card {
+    margin: 0 calc(100vw - 5% - (18rem * 3));
+  }
+</style> -->
