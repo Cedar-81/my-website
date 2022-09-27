@@ -6,6 +6,18 @@ import {  Elastic, Power1, ScrollToPlugin }from "gsap/all";
 gsap.registerPlugin(ScrollTrigger);
 gsap.registerPlugin(ScrollToPlugin)
 
+// handle click event
+// let show = false
+
+// const handleClick = () => {
+
+// }
+
+// document.querySelector('.hamburgermenu').addEventListener('click', () => {
+//     show != show
+//     console.log(show)
+// })
+
 let sections = gsap.utils.toArray(".con");
 gsap.to(sections, {
   ease: "none",

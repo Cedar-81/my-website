@@ -67,19 +67,25 @@ const articles = [
 ];
 ---
 
-<section class="articlescon mt-[7rem] bg-grayColor w-full text-white">
+<section class="articlescon blogcon pb-[5rem] bg-grayColor w-full text-white">
   <div class="w-full p-[5%]">
-    <h2 class="my-8 text-center text-[2.5rem] w-[40%] mx-auto mb-[5rem]">
-      Well, why don’t you dig in already?
+    <h2
+      class="articlesh2 my-8 text-center text-[2.5rem] w-[40%] mx-auto mb-[5rem]"
+    >
+      {`Well, why don’t you dig in already?`}
     </h2>
     <div class="articles grid grid-flow-row gap-7 grid-cols-4">
       {articles.map((content) => <Articlecard article={content} />)}
     </div>
   </div>
-  <div class="flex ml-[10%] pr-[6%]">
-    <Toparticlecard article={articles[0]} />
-    <div class="">
-      {articles.map((content) => <Mostread article={content} />)}
+  <div class="flex justify-end z-10 toparticlescon">
+    <div
+      class="flex w-[75%] pr-[6%] relative toparticles justify-between bg-black right-0 py-8"
+    >
+      <Toparticlecard article={articles[0]} />
+      <div class="flex flex-col justify-between">
+        {articles.splice(1, 4).map((content) => <Mostread article={content} />)}
+      </div>
     </div>
   </div>
 </section>

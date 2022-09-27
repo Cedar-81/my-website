@@ -2,18 +2,18 @@
 const { article } = Astro.props;
 ---
 
-<div class="w-[50%]">
+<div class="w-[40%] topcard">
   <div>
     <div
-      class="cardimg !bg-no-repeat !bg-cover h-[20rem] w-full"
+      class="cardimg !bg-no-repeat !bg-cover h-[17rem] w-full"
       style={{ background: `url(${article.img})` }}
     >
     </div>
   </div>
-  <div class="cardbody mt-4 p-3">
-    <h4 class="cardtitle text-xl font-medium">{article.title}</h4>
+  <div class="topcardbody mt-4 p-3">
+    <h4 class="cardtitle text-2xl font-medium">{article.title}</h4>
     <p class="cardbody text-sm mt-2">
-      {article.summary.substring(0, 240)}
+      {article.summary.substring(0, 540)}
       <span class="cardexpand text-mainColor">...see more</span>
     </p>
     <button class="rounded-full w-[60%] hidden h-[2.3rem] bg-mainColor mt-4"

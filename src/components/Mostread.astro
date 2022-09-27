@@ -2,15 +2,15 @@
 const { article } = Astro.props;
 ---
 
-<div class="flex">
+<div class="flex mostread">
   <div>
     <div
-      class="cardimg !bg-no-repeat !bg-cover w-[13rem] h-[7rem]"
+      class="cardimg !bg-no-repeat rounded-md !bg-cover w-[13rem] h-[7rem]"
       style={{ background: `url(${article.img})` }}
     >
     </div>
   </div>
-  <div class="cardbody px-2 pt-1 w-[15rem]">
+  <div class="cardbody px-2 ml-2 pt-1 w-[15rem]">
     <h4 class="cardtitle text-sm font-medium">{article.title}</h4>
     <p class="cardbody text-xs mt-2">
       {article.summary.substring(0, 150)}
